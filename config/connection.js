@@ -1,4 +1,4 @@
-// Importing the dotenv library and loading the variables from a .env file
+// Importing the dotenv library and loading the variables from a .env file to protect DB user and password.
 require("dotenv").config();
 
 // Importing the Sequelize library
@@ -14,7 +14,7 @@ const sequelize = process.env.JAWSDB_URL
       dialectOptions: {
         decimalNumbers: true,
       },
-    })
+    });
 
 // Export the Sequelize instance for use in other parts of the application
-module.exports = sequelize
+module.exports = sequelize;
