@@ -1,9 +1,10 @@
-
-const { Model, DataTypes } = require("sequelize")
-const sequelize = require("../config/connection")
+//Import the DataTypes class from Sequelize
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class ProductTag extends Model {}
 
+// set up fields and rules for Product model
 ProductTag.init(
   {
     id: {
